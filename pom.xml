@@ -84,7 +84,7 @@
     </build>
 
     <scm>
-        <developerConnection>scm:git:git@github.com:Csaba79-coder/sfg-pet-clinic.git</developerConnection>
+        <developerConnection>git@github.com:Csaba79-coder/sfg-pet-clinic.git</developerConnection>
         <tag>yes</tag>
     </scm>
 
