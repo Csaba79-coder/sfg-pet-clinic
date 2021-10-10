@@ -1,0 +1,10 @@
+= Good to know!
+
+== Creating a multi module project
+
+'''
+
+Main changes in pom.xml:
+
+https://github.com/springframeworkguru/sfg-pet-clinic/commit/0cd5a95625ff0698424eae0029cdcaca6019ede7#diff-6b9e3b4eb4ce4ddeb967f443688bd5bc
+
