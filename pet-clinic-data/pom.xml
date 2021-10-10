@@ -11,6 +11,8 @@
     <artifactId>pet-clinic-data</artifactId>
 
     <properties>
+        <!-- set this property or runs into error! and cannot repackage! -->
+        <!--<spring-boot.repackage.skip>true</spring-boot.repackage.skip>-->
         <spring-boot.repackage.skip>true</spring-boot.repackage.skip>
     </properties>
 
