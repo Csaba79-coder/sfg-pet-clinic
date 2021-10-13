@@ -5,7 +5,7 @@ import guru.springframework.sfgpetclinic.services.VetService;
 
 import java.util.Set;
 
-public abstract class VetServiceMap extends AbstractMapService<Vet, Long> implements VetService {
+public class VetServiceMap extends AbstractMapService<Vet, Long> implements VetService {
 
     @Override
     public Set<Vet> findAll() {
@@ -30,5 +30,10 @@ public abstract class VetServiceMap extends AbstractMapService<Vet, Long> implem
     @Override
     public void deleteById(Long id) {
         super.deleteById(id);
+    }
+
+    @Override
+    public Vet saveOwner(Vet vet) {
+        return null;
     }
 }
