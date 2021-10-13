@@ -4,8 +4,7 @@ import guru.springframework.sfgpetclinic.model.Owner;
 import guru.springframework.sfgpetclinic.model.Vet;
 import guru.springframework.sfgpetclinic.services.OwnerService;
 import guru.springframework.sfgpetclinic.services.VetService;
-import guru.springframework.sfgpetclinic.services.map.OwnerServiceMap;
-import guru.springframework.sfgpetclinic.services.map.VetServiceMap;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
@@ -14,13 +13,23 @@ import org.springframework.stereotype.Component;
 @Component
 public class DataLoader implements CommandLineRunner {
 
+//    // see bellow refactor of it!!!
+//    private final OwnerService ownerService;
+//    private final VetService vetService;
+//
+//    // TODO instead of new ... refactor and switch over to use dependency injection!
+//    DataLoader() {
+//        ownerService = new OwnerServiceMap();
+//        vetService = new VetServiceMap();
+//    }
+
     private final OwnerService ownerService;
     private final VetService vetService;
 
-    // TODO instead of new ... refactor and switch over to use dependency injection!
-    DataLoader() {
-        ownerService = new OwnerServiceMap();
-        vetService = new VetServiceMap();
+    // @Autowired <-- in older version required (obligatory / mandatory) but now newer version it is not needed!
+    DataLoader(OwnerService ownerService, VetService vetService) {
+        this.ownerService = ownerService;
+        this.vetService = vetService;
     }
 
 

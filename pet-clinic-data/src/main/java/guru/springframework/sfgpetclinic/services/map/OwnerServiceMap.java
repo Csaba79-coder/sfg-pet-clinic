@@ -3,10 +3,13 @@ package guru.springframework.sfgpetclinic.services.map;
 import guru.springframework.sfgpetclinic.model.Owner;
 import guru.springframework.sfgpetclinic.services.CrudService;
 import guru.springframework.sfgpetclinic.services.OwnerService;
+import org.springframework.stereotype.Service;
 
 import java.util.Set;
 
-// After making in web the bootstrap - DataLoader make from CrudService an OwnerService and get rid of generics as OwnerService interface implements it!
+// After making in web the bootstrap - DataLoader make from CrudService an OwnerService
+// and get rid of generics as OwnerService interface implements it!
+@Service
 public class OwnerServiceMap extends AbstractMapService<Owner, Long> implements OwnerService {
 
     @Override
